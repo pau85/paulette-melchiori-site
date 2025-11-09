@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import emailjs from '@emailjs/browser';
+import { emailConfig, createEmailTemplate, recaptchaConfig } from './emailConfig';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const [showResumeModal, setShowResumeModal] = useState(false);
+  const [resumeForm, setResumeForm] = useState({ name: '', email: '' });
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const recaptchaRef = useRef();
 
   const skills = [
     'React-Redux',
@@ -76,6 +83,77 @@ function App() {
     }
   };
 
+  const handleResumeRequest = () => {
+    setShowResumeModal(true);
+    setCaptchaValue(null); // Reset CAPTCHA when opening modal
+  };
+
+  const handleResumeFormSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Validate form fields
+    if (!resumeForm.name.trim() || !resumeForm.email.trim()) {
+      alert('Please fill in both name and email fields.');
+      return;
+    }
+    
+    // Validate CAPTCHA
+    if (!captchaValue) {
+      alert('Please complete the CAPTCHA verification.');
+      return;
+    }
+    
+    try {
+      // Create email template with form data
+      const templateParams = createEmailTemplate(resumeForm.name, resumeForm.email);
+      
+      // Send email notification using EmailJS
+      await emailjs.send(
+        emailConfig.serviceID, 
+        emailConfig.templateID, 
+        templateParams, 
+        emailConfig.publicKey
+      );
+      
+      // Show success message
+      alert(`Thank you ${resumeForm.name}! Your resume download will begin shortly. I've also been notified of your interest.`);
+      
+      // Reset form, CAPTCHA, and close modal
+      setResumeForm({ name: '', email: '' });
+      setCaptchaValue(null);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setShowResumeModal(false);
+      
+      // Trigger resume download
+      window.open('/resume.pdf', '_blank');
+      
+    } catch (error) {
+      console.error('Failed to send email notification:', error);
+      // Still allow download even if email fails
+      alert(`Thank you ${resumeForm.name}! Your resume download will begin shortly.`);
+      setResumeForm({ name: '', email: '' });
+      setCaptchaValue(null);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setShowResumeModal(false);
+      window.open('/resume.pdf', '_blank');
+    }
+  };
+
+  const handleFormInputChange = (field, value) => {
+    setResumeForm(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
   const renderContent = () => {
     switch (activeSection) {
       case 'about':
@@ -91,6 +169,63 @@ function App() {
             <p>When I'm not coding, watching/creating animations, or writing, I'm a proud mom of 2 geriatric cats, Butters (14) and Margie (13) and have a wonderful husband, Aaron. Aaron and I love to go to concerts, camp and travel across the country when we aren't hanging out with our cats watching tv shows.</p>
             
             <p>So, whether you're here for the tech insights, the animation discussions or the occasional cat story, welcome!</p>
+            
+            <div className="professional-info">
+              <h3>Professional Information</h3>
+              
+              <div className="info-section">
+                <h4>Work History</h4>
+                <div className="work-experience">
+                  <div className="job">
+                    <div className="job-header">
+                      <span className="company">Northwestern Mutual</span>
+                      <span className="duration">2022 - 2024</span>
+                    </div>
+                    <div className="role">Software Developer</div>
+                    <p>Worked on SPA (Single Page Application) projects using React and Redux for front-end development.</p>
+                  </div>
+                  
+                  <div className="job">
+                    <div className="job-header">
+                      <span className="company">Certco</span>
+                      <span className="duration">2024 - Present</span>
+                    </div>
+                    <div className="role">Software Developer</div>
+                    <p>Developing Digital Applications for new business insurance policy applications using React-Redux and TypeScript.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="info-section">
+                <h4>Education</h4>
+                <div className="education">
+                  <div className="degree">
+                    <span className="school">University of Wisconsin-Whitewater</span>
+                    <div className="program">Web Development Coursework</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="info-section">
+                <h4>Connect With Me</h4>
+                <div className="contact-links">
+                  <a 
+                    href="https://linkedin.com/in/paulette-melchiori" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="contact-link linkedin"
+                  >
+                    LinkedIn Profile
+                  </a>
+                  <button 
+                    className="contact-link resume"
+                    onClick={handleResumeRequest}
+                  >
+                    Download Resume
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         );
       case 'skillset':
@@ -205,6 +340,67 @@ function App() {
       <main className="main-content">
         {renderContent()}
       </main>
+      
+      {showResumeModal && (
+        <div className="modal-overlay" onClick={() => setShowResumeModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>Request Resume</h3>
+              <button 
+                className="modal-close"
+                onClick={() => setShowResumeModal(false)}
+              >
+                ×
+              </button>
+            </div>
+            <form onSubmit={handleResumeFormSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={resumeForm.name}
+                  onChange={(e) => handleFormInputChange('name', e.target.value)}
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={resumeForm.email}
+                  onChange={(e) => handleFormInputChange('email', e.target.value)}
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>Security Verification *</label>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={recaptchaConfig.siteKey}
+                  onChange={handleCaptchaChange}
+                  theme="light"
+                />
+              </div>
+              <div className="form-actions">
+                <button 
+                  type="button" 
+                  className="btn-secondary"
+                  onClick={() => setShowResumeModal(false)}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="btn-primary">
+                  Download Resume
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
