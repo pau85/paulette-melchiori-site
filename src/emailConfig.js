@@ -1,16 +1,14 @@
 // EmailJS Configuration
-// Replace these placeholders with your actual EmailJS credentials
 
 export const emailConfig = {
-  serviceID: 'service_zvplz8i', // From EmailJS dashboard
-  templateID: 'template_lm0r9hi', // From EmailJS dashboard  
-  publicKey: 'a9tPilRn7b95vkdh9', // From EmailJS dashboard
+  serviceID: 'service_zvplz8i',
+  templateID: 'template_lm0r9hi', 
+  publicKey: 'a9tPilRn7b95vkdh9',
 };
 
 // reCAPTCHA Configuration
-// Replace with your actual reCAPTCHA site key from Google reCAPTCHA console
 export const recaptchaConfig = {
-  siteKey: '6Led4gYsAAAAABw-uRaioc0Wyc9mH9ggWvxcNYXS', // From Google reCAPTCHA console
+  siteKey: '6Led4gYsAAAAABw-uRaioc0Wyc9mH9ggWvxcNYXS', 
 };
 
 // Template for the email that will be sent

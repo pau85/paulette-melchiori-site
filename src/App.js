@@ -154,6 +154,40 @@ function App() {
     setCaptchaValue(value);
   };
 
+  const calculateCatAge = (birthDate) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
+  const buttersCatAge = calculateCatAge('2010-04-01');
+  const margieCatAge = calculateCatAge('2011-02-23');
+
+  // Sewing project images - add your image filenames here
+  const sewingProjects = [
+    'IMG_5582.png',
+    'IMG_6641.png',
+    'IMG_6642.png',
+    'IMG_6896.png',
+    'IMG_6905.png',
+    'IMG_6907.png',
+    'IMG_6908.png',
+    'IMG_6910.png',
+    'IMG_6923.png',
+    'IMG_6924.png',
+    'IMG_7071.png',
+    'IMG_7072.png',
+    'IMG_7073.png',
+    'IMG_7183.png'
+  ];
+
   const renderContent = () => {
     switch (activeSection) {
       case 'about':
@@ -166,9 +200,9 @@ function App() {
             
             <p>Feel free to leave comments or feedback on any of my projects listed. I am always open to learning new things and appreciate any constructive feedback given.</p>
             
-            <p>When I'm not coding, watching/creating animations, or writing, I'm a proud mom of 2 geriatric cats, Butters (14) and Margie (13) and have a wonderful husband, Aaron. Aaron and I love to go to concerts, camp and travel across the country when we aren't hanging out with our cats watching tv shows.</p>
+            <p>When I'm not coding, watching/creating animations, or writing, I'm a proud mom of 2 geriatric cats, Butters ({buttersCatAge}) and Margie ({margieCatAge}) and have a wonderful husband, Aaron. Aaron and I love to go to concerts, camp and travel across the country when we aren't hanging out with our cats watching tv shows.</p>
             
-            <p>So, whether you're here for the tech insights, the animation discussions or the occasional cat story, welcome!</p>
+            <p>So, whether you're here for the tech insights, the animation discussions, looking to employ me or the occasional cat story, welcome!</p>
             
             <div className="professional-info">
               <h3>Professional Information</h3>
@@ -269,6 +303,48 @@ function App() {
           <div>
             <h2>Projects</h2>
             <p>Check out some of the projects I've worked on.</p>
+            
+            <div className="cat-ages">
+              <h4>🎨 Featured Projects</h4>
+              <div className="cat-info">
+                <div className="cat">
+                  <span className="cat-name">Portfolio Website</span>
+                  <span className="cat-details">React • CSS • EmailJS • Built: 2024 • Status: Live</span>
+                </div>
+                <div className="cat">
+                  <span className="cat-name">Animation Projects</span>
+                  <span className="cat-details">Creative Coding • Animation • Built: Ongoing • Status: In Progress</span>
+                </div>
+                <div className="cat">
+                  <span className="cat-name">SPA Applications</span>
+                  <span className="cat-details">React-Redux • TypeScript • Built: 2022-2024 • Status: Enterprise</span>
+                </div>
+                <div className="total-age">
+                  <strong>🚀 More projects coming soon! Check back for updates.</strong>
+                </div>
+              </div>
+            </div>
+            
+            <div className="cat-ages">
+              <h4>🐱 Cat Age Calculator (Fun Project!)</h4>
+              <div className="cat-info">
+                <div className="cat">
+                  <span className="cat-name">Butters</span>
+                  <span className="cat-details">Born: April 1, 2010 • Age: {buttersCatAge} years</span>
+                </div>
+                <div className="cat">
+                  <span className="cat-name">Margie</span>
+                  <span className="cat-details">Born: February 23, 2011 • Age: {margieCatAge} years</span>
+                </div>
+                <div className="total-age">
+                  <strong>Combined Age: {buttersCatAge + margieCatAge} years of cat wisdom!</strong>
+                  <br />
+                  <em style={{fontSize: '0.9rem', fontWeight: 'normal'}}>
+                    (This logic was used in my About Me section to always have my cats' current ages)
+                  </em>
+                </div>
+              </div>
+            </div>
           </div>
         );
       case 'hobbies':
@@ -276,6 +352,50 @@ function App() {
           <div>
             <h2>Hobbies</h2>
             <p>Learn about my interests and activities outside of work.</p>
+            
+            <div className="hobby-section">
+              <h3>🧵 Sewing & Crafting</h3>
+              <p>One of my favorite hobbies is sewing! I love creating everything from puff quilts to bags and baskets. Here's a gallery of some of my projects:</p>
+              
+              <div className="sewing-gallery">
+                {sewingProjects.length > 0 ? (
+                  sewingProjects.map((project, index) => (
+                    <div key={index} className="gallery-item">
+                      <img 
+                        src={`/images/sewing/${project}`} 
+                        alt={`Sewing project ${index + 1}`}
+                        className="sewing-image"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <div className="gallery-placeholder">
+                    <div className="placeholder-item">
+                      <span>🧵</span>
+                      <p>Sewing project photos coming soon!</p>
+                    </div>
+                    <div className="placeholder-item">
+                      <span>✂️</span>
+                      <p>Add your images to /public/images/sewing/</p>
+                    </div>
+                    <div className="placeholder-item">
+                      <span>🎨</span>
+                      <p>Update the sewingProjects array in App.js</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            <div className="hobby-section">
+              <h3>🎨 Animation & Creative Coding</h3>
+              <p>I love combining my programming skills with creative expression through animation and interactive art projects.</p>
+            </div>
+            
+            <div className="hobby-section">
+              <h3>✍️ Writing</h3>
+              <p>Writing helps me express ideas and document my learning journey in tech and life.</p>
+            </div>
           </div>
         );
       default:
