@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Paulette Melchiori - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! This is where I showcase my journey in web development, share my projects, and connect with fellow developers and potential collaborators.
+
+## About Me
+
+Hi there! I'm Paulette Melchiori, a passionate web developer who made the exciting transition from Mainframe to modern Web Development with React-Redux, Node.js, and TypeScript. I started this journey in May 2024, building on my foundation from UW-Whitewater where I studied Web Development in college.
+
+## What You'll Find Here
+
+- **About Me**: My professional journey and personal story
+- **Skillset**: Interactive showcase of my technical skills with detailed experience descriptions
+- **Projects**: Portfolio of projects I've worked on using various technologies
+- **Hobbies**: My passion for animation, programming, writing, and life with my cats Butters and Margie!
+
+## Tech Stack
+
+This portfolio is built with:
+- **React** - Frontend framework
+- **React Hooks** - State management (useState)
+- **CSS3** - Custom styling with responsive design
+- **JavaScript ES6+** - Modern JavaScript features
+
+## Key Features
+
+- 🎨 **Interactive Skillset**: Click on any skill to see detailed experience descriptions
+- 📱 **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- 🧭 **Single Page Application**: Smooth navigation between sections
+- 🎯 **Dynamic Content**: Easy to update and expand with new projects and skills
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/pau85/paulette-melchiori-site.git
+cd paulette-melchiori-site
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. The page will reload when you make changes.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder, optimized for deployment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Professional Experience
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I have over 2 years of experience with React and 1 year specifically with Redux, gained through work at:
+- **Northwestern Mutual** - SPA projects
+- **Certco** - Digital Applications for insurance policy applications
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My Development Philosophy
 
-### `npm run eject`
+I believe in continuous learning and staying current with technology through:
+- Regular study and practice outside of work
+- Combining programming with creative hobbies like animation
+- Building projects that solve real problems
+- Contributing to the developer community
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Connect With Me
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I'm always open to:
+- 💬 Discussing new technologies and frameworks
+- 🤝 Collaborating on interesting projects
+- 📝 Receiving feedback on my work
+- 🎨 Talking about animation and creative coding
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Plans
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This portfolio is constantly evolving! I'm always adding:
+- New projects showcasing different technologies
+- Updated skill descriptions as I gain more experience
+- Blog posts about my learning journey
+- Animation and interactive elements
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Whether you're here for tech insights, animation discussions, or the occasional cat story, welcome! Feel free to explore and reach out.*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE).
