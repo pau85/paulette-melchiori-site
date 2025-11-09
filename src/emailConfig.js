@@ -10,7 +10,7 @@ export const emailConfig = {
 // reCAPTCHA Configuration
 // Replace with your actual reCAPTCHA site key from Google reCAPTCHA console
 export const recaptchaConfig = {
-  siteKey: '6Lcr9QYsAAAAAKUZ5MjbfsuJsf8ghZY_C3Ny-nwj', // From Google reCAPTCHA console
+  siteKey: '6Led4gYsAAAAABw-uRaioc0Wyc9mH9ggWvxcNYXS', // From Google reCAPTCHA console
 };
 
 // Template for the email that will be sent
