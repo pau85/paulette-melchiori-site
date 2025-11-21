@@ -1,0 +1,125 @@
+[
+  {
+    "id": "puff-quilt-1",
+    "filename": "puff-quilt-1.png",
+    "title": "Puff Quilt - Blue & White",
+    "description": "A cozy puff quilt featuring a beautiful blue and white color scheme with soft, cloud-like texture.",
+    "category": "quilts",
+    "completedDate": "2023-08-15",
+    "difficulty": "intermediate",
+    "materials": ["cotton fabric", "batting", "thread"],
+    "size": "queen"
+  },
+  {
+    "id": "puff-quilt-2",
+    "filename": "puff-quilt-2.png",
+    "title": "Puff Quilt - Autumn Colors",
+    "description": "Warm autumn-colored puff quilt perfect for fall evenings, featuring rich oranges and deep browns.",
+    "category": "quilts",
+    "completedDate": "2023-10-22",
+    "difficulty": "intermediate",
+    "materials": ["cotton fabric", "batting", "thread"],
+    "size": "twin"
+  },
+  {
+    "id": "puff-quilt-3",
+    "filename": "puff-quilt-3.png",
+    "title": "Puff Quilt - Pastel Dreams",
+    "description": "Soft pastel puff quilt with gentle colors that create a dreamy, calming atmosphere.",
+    "category": "quilts",
+    "completedDate": "2024-01-10",
+    "difficulty": "intermediate",
+    "materials": ["cotton fabric", "batting", "thread"],
+    "size": "full"
+  },
+  {
+    "id": "bag-1",
+    "filename": "bag-1.png",
+    "title": "Everyday Tote Bag",
+    "description": "Practical and stylish tote bag perfect for daily use, with reinforced handles and interior pockets.",
+    "category": "bags",
+    "completedDate": "2023-06-05",
+    "difficulty": "beginner",
+    "materials": ["canvas", "interfacing", "thread"],
+    "size": "large"
+  },
+  {
+    "id": "bag-2",
+    "filename": "bag-2.png",
+    "title": "Quilted Shoulder Bag",
+    "description": "Elegant quilted shoulder bag with adjustable strap and zippered closure for secure storage.",
+    "category": "bags",
+    "completedDate": "2023-09-12",
+    "difficulty": "advanced",
+    "materials": ["quilted cotton", "zipper", "hardware"],
+    "size": "medium"
+  },
+  {
+    "id": "bag-3",
+    "filename": "bag-3.png",
+    "title": "Weekend Travel Bag",
+    "description": "Spacious weekend bag with multiple compartments, perfect for short trips and overnight stays.",
+    "category": "bags",
+    "completedDate": "2024-03-18",
+    "difficulty": "advanced",
+    "materials": ["durable cotton", "zippers", "webbing"],
+    "size": "large"
+  },
+  {
+    "id": "basket-1",
+    "filename": "basket-1.png",
+    "title": "Fabric Storage Basket",
+    "description": "Soft-sided storage basket ideal for organizing craft supplies, toys, or household items.",
+    "category": "home organization",
+    "completedDate": "2023-11-08",
+    "difficulty": "beginner",
+    "materials": ["heavy cotton", "interfacing", "cord"],
+    "size": "medium"
+  },
+  {
+    "id": "basket-2",
+    "filename": "basket-2.png",
+    "title": "Decorative Rope Basket",
+    "description": "Stylish rope and fabric basket that adds both function and beauty to any room.",
+    "category": "home organization",
+    "completedDate": "2024-02-14",
+    "difficulty": "intermediate",
+    "materials": ["rope", "fabric", "thread"],
+    "size": "small"
+  },
+  {
+    "id": "misc-2",
+    "filename": "misc-2.png",
+    "title": "Cozy Cat Bed",
+    "description": "Ultra-soft cat bed designed specifically for Butters and Margie's comfort and relaxation.",
+    "category": "pet accessories",
+    "completedDate": "2023-12-20",
+    "difficulty": "beginner",
+    "materials": ["fleece", "stuffing", "thread"],
+    "size": "medium",
+    "forPets": ["Butters", "Margie"]
+  },
+  {
+    "id": "misc-3",
+    "filename": "misc-3.png",
+    "title": "Beer Caddy Set",
+    "description": "Practical beer caddies perfect for outdoor gatherings and gifts for friends and family.",
+    "category": "gifts",
+    "completedDate": "2024-05-30",
+    "difficulty": "beginner",
+    "materials": ["canvas", "interfacing", "grommets"],
+    "size": "standard",
+    "giftFor": "friends and family"
+  },
+  {
+    "id": "project-1",
+    "filename": "project-1.png",
+    "title": "Holiday Table Runner",
+    "description": "Festive table runner featuring seasonal patterns, perfect for holiday celebrations and family gatherings.",
+    "category": "home decor",
+    "completedDate": "2023-12-01",
+    "difficulty": "intermediate",
+    "materials": ["seasonal fabric", "batting", "binding"],
+    "size": "table length"
+  }
+]

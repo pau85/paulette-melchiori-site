@@ -33,20 +33,39 @@
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  text-align: center;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
 }
 
-.about-intro h2 {
+.intro-image {
+  flex-shrink: 0;
+}
+
+.intro-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
   color: var(--primary-color);
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.about-intro p {
+.intro-text p {
   font-size: 1.1rem;
   color: var(--text-color);
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .about-details {

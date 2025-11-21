@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './HobbiesSection.css';
-import { Section } from '../../types';
+import { Section, SewingProject } from '../../types';
 
 interface HobbiesSectionProps {
   onSectionChange: (section: Section) => void;
-  sewingProjects: string[];
+  sewingProjects: SewingProject[];
 }
 
 interface Hobby {
@@ -83,8 +83,8 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
     }
   ];
 
-  const handleImageClick = (imageName: string): void => {
-    setSelectedImage(imageName);
+  const handleImageClick = (project: SewingProject): void => {
+    setSelectedImage(project.filename);
   };
 
   const closeImageModal = (): void => {
@@ -95,8 +95,23 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
     setSelectedHobby(hobbyId);
   };
 
-  const getCategoryImages = (category: string): string[] => {
-    return sewingProjects.filter(img => img.includes(category));
+  const getCategoryProjects = (category: string): SewingProject[] => {
+    if (category === 'puff-quilt') {
+      return sewingProjects.filter(project => project.category === 'quilts');
+    }
+    if (category === 'bag') {
+      return sewingProjects.filter(project => project.category === 'bags');
+    }
+    if (category === 'basket') {
+      return sewingProjects.filter(project => project.category === 'home organization');
+    }
+    if (category === 'misc') {
+      return sewingProjects.filter(project => project.category === 'pet accessories' || project.category === 'gifts');
+    }
+    if (category === 'project') {
+      return sewingProjects.filter(project => project.category === 'home decor');
+    }
+    return [];
   };
 
   const sewingCategories = [
@@ -165,27 +180,29 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
                   </p>
                   
                   {sewingCategories.map((category) => {
-                    const categoryImages = getCategoryImages(category.id);
-                    if (categoryImages.length === 0) return null;
+                    const categoryProjects = getCategoryProjects(category.id);
+                    if (categoryProjects.length === 0) return null;
                     
                     return (
                       <div key={category.id} className="sewing-category">
                         <h4>{category.name}</h4>
                         <p className="category-description">{category.description}</p>
                         <div className="image-grid">
-                          {categoryImages.map((imageName, index) => (
+                          {categoryProjects.map((project) => (
                             <div 
-                              key={index}
+                              key={project.id}
                               className="image-item"
-                              onClick={() => handleImageClick(imageName)}
+                              onClick={() => handleImageClick(project)}
+                              title={project.title}
                             >
                               <img 
-                                src={`/images/sewing/${imageName}`} 
-                                alt={`${category.name} project ${index + 1}`}
+                                src={`/images/sewing/${project.filename}`} 
+                                alt={project.title}
                                 loading="lazy"
                               />
                               <div className="image-overlay">
-                                <span>Click to enlarge</span>
+                                <span>{project.title}</span>
+                                <small>{project.description}</small>
                               </div>
                             </div>
                           ))}

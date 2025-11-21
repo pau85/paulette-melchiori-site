@@ -18,6 +18,49 @@ const SkillsetSection: React.FC<SkillsetSectionProps> = ({ onSectionChange, skil
     return `skill-level ${level.toLowerCase()}`;
   };
 
+  const renderTextWithLinks = (text: string): React.ReactNode => {
+    // First handle "see here: URL" or "see here URL" pattern
+    const seeHereRegex = /(.*)(\bsee here):?\s+(https?:\/\/[^\s]+)(.*)/i;
+    const seeHereMatch = text.match(seeHereRegex);
+    
+    if (seeHereMatch) {
+      const [, beforeText, , url, afterText] = seeHereMatch;
+      return (
+        <span>
+          {beforeText}see <a 
+            href={url}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            here
+          </a>{afterText}
+        </span>
+      );
+    }
+    
+    // Regular expression to match standalone URLs
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+    
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a 
+            key={index} 
+            href={part} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div className="skillset-section">
       <div className="section-header">
@@ -59,10 +102,10 @@ const SkillsetSection: React.FC<SkillsetSectionProps> = ({ onSectionChange, skil
                 
                 {skill.projects && skill.projects.length > 0 && (
                   <div className="projects-section">
-                    <h4>Notable Projects</h4>
+                    <h4>Notable Personal Projects</h4>
                     <ul>
                       {skill.projects.map((project, index) => (
-                        <li key={index}>{project}</li>
+                        <li key={index}>{renderTextWithLinks(project)}</li>
                       ))}
                     </ul>
                   </div>

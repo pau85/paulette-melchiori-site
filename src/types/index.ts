@@ -26,6 +26,20 @@ export interface Cat {
   birthDate: string;
 }
 
+export interface SewingProject {
+  id: string;
+  filename: string;
+  title: string;
+  description: string;
+  category: string;
+  completedDate: string;
+  difficulty: string;
+  materials: string[];
+  size: string;
+  forPets?: string[];
+  giftFor?: string;
+}
+
 export interface ResumeForm {
   name: string;
   email: string;

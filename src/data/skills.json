@@ -1,0 +1,71 @@
+{
+  "React": {
+    "name": "React",
+    "level": "Advanced",
+    "experience": [
+      "Built and maintained single-page applications using React and Redux at Northwestern Mutual, enhancing user experience for insurance customer portals.",
+      "Developed responsive UIs and integrated REST and GraphQL APIs using React + TypeScript in modern frontend environments.",
+      "At Certco, contributed to both legacy ASP.NET and future-state React portals, supporting a platform shift and helping define frontend architecture.",
+      "Emphasized modular component design, reusable UI logic, and clean state management using Redux and modern hooks-based practices.",
+      "Collaborated closely with backend developers to ensure seamless full stack integration and alignment with business requirements."
+    ],
+    "projects": [
+      "Portfolio Website - This interactive site written in React showcasing my skills and projects",
+      "Animation Showcase - My cat Butters sleeping on the couch, see here: https://pau85.github.io/toe-beans/ (best viewed at 800x600)"
+    ]
+  },
+  "JavaScript": {
+    "name": "JavaScript",
+    "level": "Advanced",
+    "experience": [
+      "Over 3 years of experience writing modern JavaScript (ES6+)",
+      "Proficient in asynchronous programming with Promises and async/await",
+      "Experience with DOM manipulation and event handling",
+      "Knowledge of JavaScript design patterns and best practices",
+      "Familiar with testing frameworks like Jest and testing methodologies"
+    ]
+  },
+  "TypeScript": {
+    "name": "TypeScript",
+    "level": "Intermediate",
+    "experience": [
+      "Converting JavaScript projects to TypeScript for better type safety",
+      "Creating custom type definitions and interfaces",
+      "Working with generic types and advanced TypeScript features",
+      "Integrating TypeScript with React and Node.js projects"
+    ]
+  },
+  "Node.js": {
+    "name": "Node.js",
+    "level": "Intermediate",
+    "experience": [
+      "Building RESTful APIs with Express.js",
+      "Database integration with MongoDB and PostgreSQL",
+      "Authentication and authorization implementation",
+      "File system operations and server-side scripting",
+      "Package management and dependency handling with npm"
+    ]
+  },
+  "SQL": {
+    "name": "SQL",
+    "level": "Advanced",
+    "experience": [
+      "5+ years of experience with relational databases",
+      "Complex query optimization and performance tuning",
+      "Database design and normalization",
+      "Stored procedures and trigger development",
+      "Data migration and ETL processes from mainframe systems"
+    ]
+  },
+  "CSS": {
+    "name": "CSS",
+    "level": "Advanced",
+    "experience": [
+      "Modern CSS features including Grid, Flexbox, and Custom Properties",
+      "Responsive design principles and mobile-first development",
+      "CSS animations and transitions",
+      "Preprocessors like Sass and styling methodologies",
+      "Cross-browser compatibility and accessibility considerations"
+    ]
+  }
+}

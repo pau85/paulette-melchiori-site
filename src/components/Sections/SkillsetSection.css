@@ -167,6 +167,24 @@
   left: 0;
 }
 
+.project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.project-link:visited {
+  color: var(--secondary-color);
+}
+
 .skillset-summary {
   display: grid;
   gap: 1.5rem;

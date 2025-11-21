@@ -1,95 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Section, Skill, Cat } from './types';
+import { Section, Skill, Cat, SewingProject } from './types';
 import { useTheme, themes } from './hooks/useTheme';
 import Banner from './components/Banner';
 import { AboutSection, SkillsetSection, ProjectsSection, HobbiesSection, RecruitersSection, BlogSection } from './components/Sections';
+import skillsData from './data/skills.json';
+import sewingProjectsData from './data/sewingProjects.json';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<Section>('home');
 
   const { currentTheme, changeTheme } = useTheme('light');
 
-  const skills: Record<string, Skill> = {
-    'React': {
-      name: 'React',
-      level: 'Advanced',
-      experience: [
-        'Built multiple production applications using React hooks and functional components',
-        'Experienced with React Router for client-side routing',
-        'Proficient in state management using Context API and Redux',
-        'Implemented responsive designs with React and CSS Grid/Flexbox',
-        'Created reusable component libraries and design systems'
-      ],
-      projects: [
-        'Portfolio Website - This interactive site showcasing my skills and projects',
-        'E-commerce Dashboard - Admin panel for managing products and orders',
-        'Weather App - Real-time weather application with geolocation'
-      ]
-    },
-    'JavaScript': {
-      name: 'JavaScript',
-      level: 'Advanced',
-      experience: [
-        'Over 3 years of experience writing modern JavaScript (ES6+)',
-        'Proficient in asynchronous programming with Promises and async/await',
-        'Experience with DOM manipulation and event handling',
-        'Knowledge of JavaScript design patterns and best practices',
-        'Familiar with testing frameworks like Jest and testing methodologies'
-      ]
-    },
-    'TypeScript': {
-      name: 'TypeScript',
-      level: 'Intermediate',
-      experience: [
-        'Converting JavaScript projects to TypeScript for better type safety',
-        'Creating custom type definitions and interfaces',
-        'Working with generic types and advanced TypeScript features',
-        'Integrating TypeScript with React and Node.js projects'
-      ]
-    },
-    'Node.js': {
-      name: 'Node.js',
-      level: 'Intermediate',
-      experience: [
-        'Building RESTful APIs with Express.js',
-        'Database integration with MongoDB and PostgreSQL',
-        'Authentication and authorization implementation',
-        'File system operations and server-side scripting',
-        'Package management and dependency handling with npm'
-      ]
-    },
-    'SQL': {
-      name: 'SQL',
-      level: 'Advanced',
-      experience: [
-        '5+ years of experience with relational databases',
-        'Complex query optimization and performance tuning',
-        'Database design and normalization',
-        'Stored procedures and trigger development',
-        'Data migration and ETL processes from mainframe systems'
-      ]
-    },
-    'CSS': {
-      name: 'CSS',
-      level: 'Advanced',
-      experience: [
-        'Modern CSS features including Grid, Flexbox, and Custom Properties',
-        'Responsive design principles and mobile-first development',
-        'CSS animations and transitions',
-        'Preprocessors like Sass and styling methodologies',
-        'Cross-browser compatibility and accessibility considerations'
-      ]
-    }
-  };
+  const skills: Record<string, Skill> = skillsData;
 
-  const sewingProjects: string[] = [
-    'puff-quilt-1.png', 'puff-quilt-2.png', 'puff-quilt-3.png', 
-    'bag-1.png', 'bag-2.png', 'bag-3.png',
-    'basket-1.png', 'basket-2.png',
-    'misc-2.png', 'misc-3.png',
-    'project-1.png'
-  ];
+  const sewingProjects: SewingProject[] = sewingProjectsData;
 
   const calculateCatAge = (birthDate: string): number => {
     const today = new Date();
@@ -155,13 +80,13 @@ const App: React.FC = () => {
       );
     }
     
-    if (activeSection === 'recruiters') {
-      return (
-        <RecruitersSection 
-          onSectionChange={setActiveSection}
-        />
-      );
-    }
+    // if (activeSection === 'recruiters') {
+    //   return (
+    //     <RecruitersSection 
+    //       onSectionChange={setActiveSection}
+    //     />
+    //   );
+    // }
     
     if (activeSection === 'blog') {
       return (
@@ -256,14 +181,14 @@ const App: React.FC = () => {
               Hobbies
             </button>
           </li>
-          <li>
+          {/* <li>
             <button 
               className={activeSection === 'recruiters' ? 'active' : ''}
               onClick={() => setActiveSection('recruiters')}
             >
               Recruiters 👋
             </button>
-          </li>
+          </li> */}
           <li>
             <button 
               className={activeSection === 'blog' ? 'active' : ''}

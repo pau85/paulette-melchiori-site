@@ -182,7 +182,7 @@ const RecruitersSection: React.FC<RecruitersSectionProps> = ({ onSectionChange }
         <p>Ready to discuss how I can contribute to your team? Here are the best ways to reach me:</p>
         
         <div className="contact-methods">
-          <div className="contact-card primary-contact">
+          {/* <div className="contact-card primary-contact">
             <h4>📄 Get My Resume</h4>
             <p>
               Request a copy of my detailed resume with complete work history, 
@@ -194,7 +194,7 @@ const RecruitersSection: React.FC<RecruitersSectionProps> = ({ onSectionChange }
             >
               Request Resume
             </button>
-          </div>
+          </div> */}
           
           <div className="contact-card">
             <h4>💼 LinkedIn</h4>
@@ -208,13 +208,13 @@ const RecruitersSection: React.FC<RecruitersSectionProps> = ({ onSectionChange }
           </div>
           
           <div className="contact-card">
-            <h4>📧 Direct Email</h4>
+            <h4>📧 Message Me</h4>
             <p>For specific opportunities or quick questions, feel free to reach out directly.</p>
             <button 
               className="contact-link email"
               onClick={() => window.location.href = 'mailto:paulette.melchiori@email.com'}
             >
-              Send Email
+              Send Message
             </button>
           </div>
         </div>
