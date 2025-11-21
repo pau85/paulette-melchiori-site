@@ -1,0 +1,64 @@
+[
+  {
+    "id": "portfolio",
+    "title": "Interactive Portfolio Website",
+    "description": "This very website you're viewing! A modern, responsive portfolio built with React and TypeScript featuring animated banners, theme switching, and modular architecture.",
+    "technologies": ["React", "TypeScript", "CSS3", "EmailJS", "reCAPTCHA"],
+    "features": [
+      "Animated banner system with hover-to-pause functionality",
+      "Six custom color themes with real-time switching",
+      "Modular TypeScript architecture for maintainability",
+      "Interactive skill cards with detailed experience information",
+      "Email integration for resume requests with reCAPTCHA security",
+      "Fully responsive design optimized for all devices"
+    ],
+    "status": "completed",
+    "demo": "You're looking at it!",
+    "github": "https://github.com/pau85/paulette-melchiori-site"
+  },
+  {
+    "id": "unity-game",
+    "title": "Butters On The Couch Project",
+    "description": "An a quick little animation with Unity and C#, showcasing very much my introductory skills at in animation with Unity.",
+    "technologies": ["Unity", "C#"],
+    "features": [
+      "Butters sitting on the couch blinking and wagging his tail",
+      "Custom C# scripting for animation",
+      "Cross-platform compatibility"
+    ],
+    "status": "completed",
+    "demo": "https://play.unity.com/en/games/57a22655-de6a-433f-a8ad-d9123fb28dcf/webgl-builds"
+  },
+  {
+    "id": "animation-project-gimp-movie-maker",
+    "title": "KBO Animation with GIMP & Movie Maker",
+    "description": "This short animation is a parody of the iconic HBO intro sequence, rebranded as KBO (Kitty Box Office). It includes custom TV static effects, a stylized title reveal, and a comedic timing cue with a meow to match the feline theme of my animated cat series.",
+    "technologies": ["GIMP", "Windows Movie Maker", "Digital Art", "Frame Animation"],
+    "features": [
+      "Frame-by-frame digital artwork created in GIMP",
+      "Custom character and scene design",
+      "Video editing and timing coordination",
+      "Smooth animation transitions and effects",
+      "Creative storytelling through visual media",
+      "Multi-software workflow integration"
+    ],
+    "status": "completed",
+    "demo": "https://www.youtube.com/watch?v=85r13wD6ZZo&t=2s"
+  },
+  {
+    "id": "animation-project-gimp-opentoonz",
+    "title": "Butters & Margie Animation with GIMP & OpenToonz",
+    "description": "An ongoing animation project featuring both of my cats, Butters and Margie. Created using GIMP for artwork and OpenToonz for animation. The background landscapes and house interiors are complete, and Butters shows expressive facial animations while Margie maintains still.",
+    "technologies": ["GIMP", "OpenToonz", "Digital Art", "2D Animation"],
+    "features": [
+      "Dual character animation featuring both cats",
+      "Detailed background landscapes and interior scenes",
+      "Expressive facial animation for Butters",
+      "Professional 2D animation software workflow",
+      "Character personality representation through animation",
+      "Hand-drawn digital artwork and frame animation"
+    ],
+    "status": "in-progress",
+    "demo": "https://www.youtube.com/watch?v=GglcwipMU48&t=13s"
+  }
+]

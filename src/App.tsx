@@ -30,8 +30,8 @@ const App: React.FC = () => {
   };
 
   const cats: Cat[] = [
-    { name: 'Butters', birthDate: '2008-08-15' },
-    { name: 'Margie', birthDate: '2009-03-20' }
+    { name: 'Butters', birthDate: '2010-04-01' },
+    { name: 'Margie', birthDate: '2011-02-23' }
   ];
 
   const renderContent = (): React.ReactNode => {

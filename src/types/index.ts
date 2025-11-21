@@ -40,6 +40,18 @@ export interface SewingProject {
   giftFor?: string;
 }
 
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  features: string[];
+  demo?: string;
+  github?: string;
+  image?: string;
+  status: string;
+}
+
 export interface ResumeForm {
   name: string;
   email: string;

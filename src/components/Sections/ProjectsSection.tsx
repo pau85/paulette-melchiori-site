@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
 import './ProjectsSection.css';
-import { Section, Cat } from '../../types';
+import { Section, Cat, Project } from '../../types';
+import projectsData from '../../data/projects.json';
 
 interface ProjectsSectionProps {
   onSectionChange: (section: Section) => void;
   cats: Cat[];
   calculateCatAge: (birthDate: string) => number;
-}
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  features: string[];
-  demo?: string;
-  github?: string;
-  image?: string;
-  status: 'completed' | 'in-progress' | 'planned';
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ 
@@ -28,74 +17,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [selectedCat, setSelectedCat] = useState<number>(0);
 
-  const projects: Project[] = [
-    {
-      id: 'portfolio',
-      title: 'Interactive Portfolio Website',
-      description: 'This very website you\'re viewing! A modern, responsive portfolio built with React and TypeScript featuring animated banners, theme switching, and modular architecture.',
-      technologies: ['React', 'TypeScript', 'CSS3', 'EmailJS', 'reCAPTCHA'],
-      features: [
-        'Animated banner system with hover-to-pause functionality',
-        'Six custom color themes with real-time switching',
-        'Modular TypeScript architecture for maintainability',
-        'Interactive skill cards with detailed experience information',
-        'Email integration for resume requests with reCAPTCHA security',
-        'Fully responsive design optimized for all devices'
-      ],
-      status: 'completed',
-      demo: 'You\'re looking at it!',
-      github: 'https://github.com/pau85/paulette-melchiori-site'
-    },
-    {
-      id: 'ecommerce',
-      title: 'E-commerce Admin Dashboard',
-      description: 'A comprehensive admin panel for managing products, orders, and customer data with real-time analytics and inventory management.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Express', 'Chart.js'],
-      features: [
-        'Real-time sales and inventory analytics',
-        'Product management with image uploads',
-        'Order tracking and status management',
-        'Customer data visualization and reporting',
-        'Role-based authentication and permissions',
-        'Automated email notifications for order updates'
-      ],
-      status: 'completed',
-      image: '/images/projects/ecommerce-dashboard.jpg'
-    },
-    {
-      id: 'weather',
-      title: 'Weather Forecast Application',
-      description: 'A sleek weather app with geolocation support, detailed forecasts, and beautiful weather animations.',
-      technologies: ['React', 'Weather API', 'Geolocation', 'CSS Animations'],
-      features: [
-        'Real-time weather data from multiple sources',
-        'Geolocation-based automatic location detection',
-        'Detailed 7-day forecast with hourly breakdowns',
-        'Animated weather icons and background effects',
-        'Favorite locations with quick switching',
-        'Weather alerts and notification system'
-      ],
-      status: 'completed',
-      demo: 'https://weather-app-demo.netlify.app',
-      image: '/images/projects/weather-app.jpg'
-    },
-    {
-      id: 'task-manager',
-      title: 'Collaborative Task Manager',
-      description: 'A team-focused task management application with real-time collaboration, file sharing, and project tracking.',
-      technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'JWT'],
-      features: [
-        'Real-time collaborative editing and updates',
-        'Project organization with team member assignments',
-        'File upload and sharing within tasks',
-        'Deadline tracking with automated reminders',
-        'Progress visualization with charts and metrics',
-        'Integration with popular calendar applications'
-      ],
-      status: 'in-progress',
-      image: '/images/projects/task-manager.jpg'
-    }
-  ];
+  const projects: Project[] = projectsData;
 
   const handleProjectClick = (projectId: string): void => {
     setSelectedProject(selectedProject === projectId ? null : projectId);
@@ -136,9 +58,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
       <div className="projects-intro">
         <p>
-          Here's a collection of projects that demonstrate my technical skills and problem-solving approach. 
-          Each project represents a different aspect of my development expertise, from frontend design to 
-          full-stack architecture.
+          A showcase of projects that highlight my range as an engineer and creator. From frontend UI work and full-stack architecture to animation and interactive tools, each project demonstrates my approach to thoughtful, practical, and polished problem-solving.
         </p>
       </div>
 
@@ -201,7 +121,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
       <div className="featured-tool">
         <h3>🐱 Cat Age Calculator</h3>
-        <p>A fun little tool to calculate cat ages! Meet my furry coding companions:</p>
+        <p>A fun little tool I made out of boredom to calculate my cat ages (also so I don't forget!).</p>
         
         <div className="cat-selector">
           {cats.map((cat, index) => (
@@ -225,8 +145,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             </div>
             <p className="cat-description">
               {selectedCat === 0 
-                ? "Butters is my coding buddy who loves to sit on my keyboard and 'help' with debugging!" 
-                : "Margie is the supervisor who makes sure I take proper breaks and stay hydrated!"
+                ? "Butters is the sleepy coworker who always naps during meetings." 
+                : "Margie is very social and loves to say hi once in a while I'm on calls, you may meet her one day!"
               }
             </p>
           </div>
