@@ -1,71 +1,216 @@
 {
-  "React": {
-    "name": "React",
-    "level": "Advanced",
-    "experience": [
-      "Built and maintained single-page applications using React and Redux at Northwestern Mutual, enhancing user experience for insurance customer portals.",
-      "Developed responsive UIs and integrated REST and GraphQL APIs using React + TypeScript in modern frontend environments.",
-      "At Certco, contributed to both legacy ASP.NET and future-state React portals, supporting a platform shift and helping define frontend architecture.",
-      "Emphasized modular component design, reusable UI logic, and clean state management using Redux and modern hooks-based practices.",
-      "Collaborated closely with backend developers to ensure seamless full stack integration and alignment with business requirements."
-    ],
-    "projects": [
-      "Portfolio Website - This interactive site written in React showcasing my skills and projects",
-      "Animation Showcase - My cat Butters sleeping on the couch, see here: https://pau85.github.io/toe-beans/ (best viewed at 800x600)"
-    ]
-  },
-  "JavaScript": {
-    "name": "JavaScript",
-    "level": "Advanced",
-    "experience": [
-      "Over 3 years of experience writing modern JavaScript (ES6+)",
-      "Proficient in asynchronous programming with Promises and async/await",
-      "Experience with DOM manipulation and event handling",
-      "Knowledge of JavaScript design patterns and best practices",
-      "Familiar with testing frameworks like Jest and testing methodologies"
-    ]
-  },
-  "TypeScript": {
-    "name": "TypeScript",
-    "level": "Intermediate",
-    "experience": [
-      "Converting JavaScript projects to TypeScript for better type safety",
-      "Creating custom type definitions and interfaces",
-      "Working with generic types and advanced TypeScript features",
-      "Integrating TypeScript with React and Node.js projects"
-    ]
-  },
-  "Node.js": {
-    "name": "Node.js",
-    "level": "Intermediate",
-    "experience": [
-      "Building RESTful APIs with Express.js",
-      "Database integration with MongoDB and PostgreSQL",
-      "Authentication and authorization implementation",
-      "File system operations and server-side scripting",
-      "Package management and dependency handling with npm"
-    ]
-  },
-  "SQL": {
-    "name": "SQL",
-    "level": "Advanced",
-    "experience": [
-      "5+ years of experience with relational databases",
-      "Complex query optimization and performance tuning",
-      "Database design and normalization",
-      "Stored procedures and trigger development",
-      "Data migration and ETL processes from mainframe systems"
-    ]
-  },
-  "CSS": {
-    "name": "CSS",
-    "level": "Advanced",
-    "experience": [
-      "Modern CSS features including Grid, Flexbox, and Custom Properties",
-      "Responsive design principles and mobile-first development",
-      "CSS animations and transitions",
-      "Preprocessors like Sass and styling methodologies",
-      "Cross-browser compatibility and accessibility considerations"
-    ]
-  }
+    "React": {
+        "name": "React",
+        "level": "Advanced",
+        "experience": [
+            "Built and maintained single-page applications using React and Redux at Northwestern Mutual, enhancing user experience for insurance customer portals.",
+            "Developed responsive UIs and integrated REST and GraphQL APIs using React + TypeScript in modern frontend environments.",
+            "At Certco, contributed to both legacy ASP.NET and future-state React portals, supporting a platform shift and helping define frontend architecture.",
+            "Emphasized modular component design, reusable UI logic, and clean state management using Redux and modern hooks-based practices.",
+            "Collaborated closely with backend developers to ensure seamless full stack integration and alignment with business requirements."
+        ],
+        "projects": [
+            "Portfolio Website - This interactive site written in React showcasing my skills and projects",
+            "Animation Showcase - My cat Butters sleeping on the couch, see here: https://pau85.github.io/toe-beans/ (best viewed at 800x600)"
+        ]
+    },
+    "JavaScript": {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "experience": [
+            "Over 3 years of experience writing modern JavaScript (ES6+)",
+            "Proficient in asynchronous programming with Promises and async/await",
+            "Experience with DOM manipulation and event handling",
+            "Knowledge of JavaScript design patterns and best practices",
+            "Familiar with testing frameworks like Jest and testing methodologies"
+        ]
+    },
+    "TypeScript": {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "experience": [
+            "Converting JavaScript projects to TypeScript for better type safety",
+            "Creating custom type definitions and interfaces",
+            "Working with generic types and advanced TypeScript features",
+            "Integrating TypeScript with React and Node.js projects"
+        ]
+    },
+    "Node.js": {
+        "name": "Node.js",
+        "level": "Advanced",
+        "experience": [
+            "Building RESTful APIs with Express.js",
+            "Database integration with MySQL and SQL Server",
+            "Authentication and authorization implementation",
+            "File system operations and server-side scripting",
+            "Package management and dependency handling with npm"
+        ]
+    },
+    "ASP.NET": {
+        "name": "ASP.NET",
+        "level": "Intermediate",
+        "experience": [
+            "Maintaining legacy ASP.NET applications and supporting migration to modern frameworks like React",
+            "Understanding of ASP.NET MVC architecture and Razor views",
+            "Integrating ASP.NET applications with databases using Entity Framework",
+            "Implementing authentication and authorization in ASP.NET applications",
+            "Collaborating with frontend teams to ensure seamless integration with modern UIs"
+        ]
+    },
+    ".NET Core 8": {
+        "name": ".NET Core 8",
+        "level": "Intermediate",
+        "experience": [
+            "Designed and implemented .NET Core 8 data access layer using Entity Framework Core for on-prem to cloud data migration project along with SQL Views as a hybrid solution",
+            "Built RESTful APIs and GraphQL resolvers using .NET Core 8 to support frontend applications for data and document retrievals",
+            "Building RESTful APIs using ASP.NET Core Web API",
+            "Integrating .NET Core applications with SQL Server databases",
+            "Implementing dependency injection and middleware in .NET Core applications"
+        ]
+    },
+    "SQL": {
+        "name": "SQL",
+        "level": "Advanced",
+        "experience": [
+            "5+ years of experience with relational databases",
+            "Complex query optimization and performance tuning",
+            "Database design and normalization",
+            "Stored procedures and trigger development",
+            "SQL View creation and management",
+            "Data migration and ETL processes from mainframe systems and .NET Core 8"
+        ]
+    },
+    "CSS": {
+        "name": "CSS",
+        "level": "Intermediate",
+        "experience": [
+            "Modern CSS features including Grid, Flexbox, and Custom Properties",
+            "Integrating SCSS with React projects for modular styling",
+            "Responsive design principles and mobile-first development",
+            "CSS animations and transitions",
+            "Preprocessors like Sass and styling methodologies",
+            "Cross-browser compatibility and accessibility considerations"
+        ]
+    },
+    "HTML5": {
+        "name": "HTML5",
+        "level": "Intermediate",
+        "experience": [
+            "Modern HTML5 features including semantic elements such as <article>, <section>, and <nav>",
+            "Applied HTML5 form attributes (required, min, pattern, etc.) within controlled components using TypeScript to enforce validation and UX standards",
+            "Integrated multimedia and interactive elements like <video>, <canvas>, and <details> inside TypeScript-based components, managing logic via React hooks and state",
+            "Ensured semantic structure and ARIA compliance using HTML5 best practices within component render functions, combined with TypeScript for prop validation and event typing",
+            "Built responsive layouts using HTML5 markup in combination with modern CSS and utility-first frameworks where applicable"
+        ]
+    },
+    "Docker": {
+        "name": "Docker",
+        "level": "Intermediate",
+        "experience": [
+            "Containerized React applications using Docker to streamline local development and ensure consistent environments across teams",
+            "Created and maintained docker-compose.yml files to orchestrate complex multi-container setups, including frontend, backend, proxy, and supporting services",
+            "Managed development environments with up to 20 concurrent containers, coordinating service dependencies such as databases, APIs, and logging tools",
+            "Improved local development workflows by scripting container lifecycle management (up, down, rebuild, volume persistence) and standardizing project onboarding",
+            "Integrated containerized environments into CI/CD pipelines to support consistent testing, deployment, and rollback processes"
+        ]
+    },
+    "Git": {
+        "name": "Git",
+        "level": "Advanced",
+        "experience": [
+            "Proficient in using Git for version control in collaborative projects",
+            "Experience with branching strategies like Git Flow and feature branching",
+            "Familiar with resolving merge conflicts and rebasing",
+            "Knowledge of Git hooks and automation scripts",
+            "Using platforms like GitHub and GitLab for code hosting and collaboration"
+        ]
+    },
+    "RESTful APIs": {
+        "name": "RESTful APIs",
+        "level": "Advanced",
+        "experience": [
+            "Designing and implementing RESTful APIs using Node.js and Express",
+            "Consuming third-party APIs and integrating them into applications",
+            "Understanding of HTTP methods, status codes, and best practices for API design",
+            "Experience with API documentation tools like Swagger",
+            "Implementing authentication and authorization mechanisms for secure API access"
+        ]
+    },
+    "GraphQL": {
+        "name": "GraphQL",
+        "level": "Intermediate",
+        "experience": [
+            "Building GraphQL APIs using Apollo Server and integrating them with Node.js backends",
+            "Consuming GraphQL APIs in React applications using Apollo Client",
+            "Designing efficient GraphQL schemas and resolvers",
+            "Implementing query optimization techniques like batching and caching",
+            "Familiarity with GraphQL best practices and security considerations"
+        ]
+    },
+    "Agile Methodologies": {
+        "name": "Agile Methodologies",
+        "level": "Advanced",
+        "experience": [
+            "Participating in Agile ceremonies such as sprint planning, daily stand-ups, and retrospectives",
+            "Using Agile project management tools like Jira and Trello to track tasks and progress",
+            "Collaborating with cross-functional teams in an Agile environment",
+            "Implementing continuous integration and continuous delivery (CI/CD) practices",
+            "Adapting to changing requirements and priorities in a fast-paced development environment"
+        ]
+    },
+    "Unit Testing": {
+        "name": "Unit Testing",
+        "level": "Advanced",
+        "experience": [
+            "Writing unit tests for JavaScript and TypeScript applications using Jest",
+            "Creating test cases for React components using React Testing Library",
+            "Mocking dependencies and external services in unit tests",
+            "Measuring code coverage and ensuring high test quality",
+            "Integrating unit tests into CI/CD pipelines for automated testing",
+            "Leveraged Postman for API testing and validation during development and debugging processes"
+        ]
+    },
+    "CI/CD": {
+        "name": "CI/CD",
+        "level": "Intermediate",
+        "experience": [
+            "Applied CI/CD pipeline tools like SonarQube and Checkmarx for code quality and security analysis",
+            "Automating build, test, and deployment processes for web applications",
+            "Implementing automated testing and code quality checks in CI/CD workflows",
+            "Deploying applications to cloud platforms like AWS and Azure",
+            "Monitoring and maintaining CI/CD pipelines for reliability and efficiency"
+        ]
+    },
+    "Performance Optimization": {
+        "name": "Performance Optimization",
+        "level": "Intermediate",
+        "experience": [
+            "Optimizing web application performance through code splitting, pagination and lazy loading",
+            "Implementing caching strategies to improve load times and reduce server requests",
+            "Enhancing frontend performance through efficient rendering and state management"
+        ]
+    },
+    "Mainframe Systems": {
+        "name": "Mainframe Systems",
+        "level": "Advanced",
+        "experience": [
+            "Developed in PL1 and SAS for data processing and reporting within Billing and Payments systems",
+            "Lead migration from SOAP web services to RESTful APIs for improved performance and scalability",
+            "DB2 and DAC knowledge for PL1 data access and manipulation",
+            "Understanding of mainframe architecture and data formats",
+            "Creating, managing and supporting JCL jobs for batch processing in Billing and Payments systems",
+            "Collaborating with mainframe teams to ensure seamless integration with modern applications"
+        ]
+    },
+    "Risk Engineering": {
+        "name": "Risk Engineering",
+        "level": "Advanced",
+        "experience": [
+            "Implementing security best practices in web applications to protect against common vulnerabilities within Mainframe Billing and Payments systems",
+            "Utilizing HTTPS and secure headers to enhance application security to RESTful Web Services",
+            "Implementing authentication and authorization mechanisms with Apigee and Tyke API Gateways",
+            "Conducting security audits and vulnerability assessments annually",
+            "Staying updated with the latest web security threats and mitigation strategies"
+        ]
+    }
 }

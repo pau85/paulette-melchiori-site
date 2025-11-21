@@ -137,24 +137,24 @@ const SkillsetSection: React.FC<SkillsetSectionProps> = ({ onSectionChange, skil
         <div className="summary-card">
           <h3>📊 Data-Driven</h3>
           <p>
-            With my strong background in SQL and database systems, I bring a data-centric 
+            There is so much power to leverage with the SQL language in combination with other tech stacks like .NET and React. With my strong background in SQL and database systems, I bring a data-centric 
             approach to application development, ensuring efficient data handling and optimal performance.
           </p>
         </div>
       </div>
 
-      <div className="skillset-cta">
+      <div>
         <h3>See These Skills in Action</h3>
         <p>Ready to explore my projects and see how I apply these technologies?</p>
         <div className="cta-buttons">
           <button 
-            className="cta-button primary"
+            className="cta-button"
             onClick={() => onSectionChange('projects')}
           >
             View My Projects
           </button>
           <button 
-            className="cta-button secondary"
+            className="cta-button"
             onClick={() => onSectionChange('recruiters')}
           >
             Let's Work Together
