@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './HobbiesSection.css';
 import { Section, SewingProject } from '../../types';
+import hobbiesData from '../../data/hobbies.json';
 
 interface HobbiesSectionProps {
   onSectionChange: (section: Section) => void;
@@ -23,65 +24,7 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedHobby, setSelectedHobby] = useState<string>('sewing');
 
-  const hobbies: Hobby[] = [
-    {
-      id: 'sewing',
-      title: 'Sewing & Quilting',
-      description: 'Creating beautiful handmade items, from quilts to bags and home decor.',
-      icon: '🧵',
-      details: [
-        'Hand-pieced and machine quilts with intricate designs',
-        'Custom bags and purses for everyday use',
-        'Decorative baskets and storage solutions',
-        'Home decor items and seasonal decorations',
-        'Upcycling and repurposing fabric into new creations',
-        'Exploring traditional and modern quilting techniques'
-      ],
-      featured: true
-    },
-    {
-      id: 'cats',
-      title: 'Cat Companionship',
-      description: 'Sharing my life and workspace with two amazing feline coding assistants.',
-      icon: '🐱',
-      details: [
-        'Butters: My loyal keyboard supervisor and debugging partner',
-        'Margie: The project manager who ensures proper break scheduling',
-        'Learning about cat behavior and enrichment activities',
-        'Creating DIY cat toys and furniture',
-        'Photography sessions capturing their unique personalities',
-        'Volunteering at local animal shelters when possible'
-      ]
-    },
-    {
-      id: 'crafting',
-      title: 'Creative Projects',
-      description: 'Various crafting and DIY projects that spark creativity and problem-solving.',
-      icon: '🎨',
-      details: [
-        'Hand lettering and calligraphy for personalized gifts',
-        'DIY home improvement and organization projects',
-        'Seasonal crafts and holiday decorations',
-        'Upcycling furniture and household items',
-        'Exploring new crafting techniques through online tutorials',
-        'Gift-making for friends and family celebrations'
-      ]
-    },
-    {
-      id: 'learning',
-      title: 'Continuous Learning',
-      description: 'Always exploring new technologies, techniques, and creative pursuits.',
-      icon: '📚',
-      details: [
-        'Following tech blogs and development communities',
-        'Experimenting with new programming languages and frameworks',
-        'Online courses in design, UX, and emerging technologies',
-        'Reading about best practices in software development',
-        'Participating in coding challenges and hackathons',
-        'Learning from open-source projects and contributing when possible'
-      ]
-    }
-  ];
+  const hobbies: Hobby[] = hobbiesData;
 
   const handleImageClick = (project: SewingProject): void => {
     setSelectedImage(project.filename);
@@ -115,7 +58,7 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
   };
 
   const sewingCategories = [
-    { id: 'puff-quilt', name: 'Puff Quilts', description: 'Cozy and textured quilts with dimensional puffs' },
+    { id: 'puff-quilt', name: 'Puff Quilts', description: 'Cozy and textured quilts with dimensional puffs and one with a special puppy name Cocoa' },
     { id: 'bag', name: 'Bags & Purses', description: 'Functional and stylish handmade bags' },
     { id: 'basket', name: 'Storage Baskets', description: 'Organizational solutions with style' },
     { id: 'misc', name: 'Home Decor', description: 'Miscellaneous decorative items' },
@@ -184,7 +127,7 @@ const HobbiesSection: React.FC<HobbiesSectionProps> = ({
                     if (categoryProjects.length === 0) return null;
                     
                     return (
-                      <div key={category.id} className="sewing-category">
+                      <div key={category.id} className="sewing-category" data-category={category.id}>
                         <h4>{category.name}</h4>
                         <p className="category-description">{category.description}</p>
                         <div className="image-grid">

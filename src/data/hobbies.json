@@ -1,0 +1,55 @@
+[
+  {
+    "id": "sewing",
+    "title": "Sewing & Quilting",
+    "description": "Creating beautiful handmade items, from quilts to bags and home decor.",
+    "icon": "🧵",
+    "details": [
+      "Hand-pieced and machine quilts with intricate designs",
+      "Custom bags and purses for everyday use",
+      "Decorative baskets and storage solutions",
+      "Home decor items and seasonal decorations",
+      "Upcycling and repurposing fabric into new creations",
+      "Exploring traditional and modern quilting techniques"
+    ],
+    "featured": true
+  },
+  {
+    "id": "cats",
+    "title": "Cat Companionship",
+    "description": "Sharing my life and workspace with two amazing feline coding assistants.",
+    "icon": "🐱",
+    "details": [
+      "Butters: While he sleeps on the job, he makes a pretty awesome cat nap buddy",
+      "Margie: Occassionally joins me for meetings and provides moral support",
+      "Learning about cat behavior and enrichment activities",
+      "Creating DIY cat toys, blankets and apparel",
+      "Photography sessions capturing their unique personalities"
+    ]
+  },
+  {
+    "id": "crafting",
+    "title": "Creative Projects",
+    "description": "Various crafting and DIY projects that spark creativity and problem-solving.",
+    "icon": "🎨",
+    "details": [
+      "Created my own party favor bags with stickers of my cats for my wedding party (it was a real hit too!)",
+      "Creating digital Art in GIMP and animation in OpenToonz is my favorite digital hobby outside of programming",
+      "Sewing and quilting handmade items for personal use and gifts"
+    ]
+  },
+  {
+    "id": "learning",
+    "title": "Continuous Learning",
+    "description": "Always exploring new technologies, techniques, and creative pursuits.",
+    "icon": "📚",
+    "details": [
+      "Following tech blogs and development communities: Reddit, Dev.to, Hacker News",
+      "Experimenting with new programming languages and frameworks, like Unity and C#",
+      "Online courses in design, UX, and emerging technologies, freecodecamp.org is a favorite",
+      "Reading about best practices in software development, Software Architecture: The Hard Parts and React Key Concepts are a couple of my go-to books",
+      "Participating in coding challenges and hackathons",
+      "Geeking out with my friend Sam who is also an engineer that understands and shares my passion for all things tech"
+    ]
+  }
+]

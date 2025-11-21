@@ -88,13 +88,13 @@ const App: React.FC = () => {
     //   );
     // }
     
-    if (activeSection === 'blog') {
-      return (
-        <BlogSection 
-          onSectionChange={setActiveSection}
-        />
-      );
-    }
+    // if (activeSection === 'blog') {
+    //   return (
+    //     <BlogSection 
+    //       onSectionChange={setActiveSection}
+    //     />
+    //   );
+    // }
     
     // All sections are now implemented!
     return (
@@ -189,14 +189,14 @@ const App: React.FC = () => {
               Recruiters 👋
             </button>
           </li> */}
-          <li>
+          {/* <li>
             <button 
               className={activeSection === 'blog' ? 'active' : ''}
               onClick={() => setActiveSection('blog')}
             >
               My Blog
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <main className="main-content">
